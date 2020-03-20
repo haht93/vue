@@ -3,8 +3,7 @@ import axios from 'axios'
 export default class AbstractService {
   constructor(config = {}) {
     this.config  = config;
-    this.headers = {}
-
+    this.headers = {};
     this.client = axios.create(
       this.buildConfig()
     )
@@ -26,8 +25,7 @@ export default class AbstractService {
     this.headers = {
       ...this.headers,
       ...headers,
-    }
-
+    };
     return this
   }
 
